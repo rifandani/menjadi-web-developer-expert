@@ -1,0 +1,89 @@
+/*
+ * main
+ */
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-content__container {
+  margin: 2em 10%;
+  padding: 1em;
+}
+
+.main-content__title {
+  margin-bottom: 0.5em;
+}
+
+#explore-restaurant {
+  display: grid;
+  grid-row-gap: 1.5em;
+  padding-top: 1.5em;
+}
+
+/*
+ * Cards
+ */
+
+.card {
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.card:hover {
+  box-shadow: 10px 10px 5px 0px var(--secondary-color);
+}
+
+.card-rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: large;
+  background-color: var(--btn);
+  padding: 0.4em 1.3em;
+  z-index: 1;
+}
+
+.card-rating .fa {
+  font-size: smaller;
+  padding: 0.3em 0.8em 0.3em 0;
+  color: yellow;
+}
+
+.img-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  max-height: 600px;
+}
+
+.card-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-content {
+  padding: 1.4em 2em;
+  font-size: small;
+  text-align: left;
+}
+
+.card-content-title {
+  font-weight: bold;
+  padding-bottom: 0.376em;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

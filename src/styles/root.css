@@ -1,0 +1,69 @@
+/*
+ *  root settings
+*/
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #f0e3ca;
+  --font-color: #1b1a17;
+  --navbar-hover: #f0e3ca;
+  --btn: #ff8303;
+  --btn-hover: #a35709;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--font-color);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  background-color: var(--btn);
+  color: white;
+  padding: 8px;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Button */
+
+.btn {
+  margin: 2em;
+  padding: 0.5em 1em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--btn);
+  border: 1px solid transparent;
+  font-size: large;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}
