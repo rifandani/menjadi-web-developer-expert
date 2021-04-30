@@ -57,7 +57,6 @@
 /* Small devices ( >= 600px ) */
 @media only screen and (min-width: 600px) {
   .main-content__title {
-    text-align: center;
     margin-bottom: 1em;
   }
 
