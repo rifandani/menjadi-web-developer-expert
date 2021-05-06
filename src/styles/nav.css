@@ -15,7 +15,8 @@ nav {
 .menu {
   font-size: 25px;
   display: none;
-  width: 25px;
+  width: 44px;
+  height: 44px;
   color: var(--primary-color);
 }
 
@@ -65,12 +66,12 @@ nav {
 
 .nav-item a:hover {
   text-decoration: underline;
-  color: var(--navbar-hover);
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
 .nav-item button:hover {
   text-decoration: underline;
-  color: var(--navbar-hover);
+  color: var(--secondary-color);
   cursor: pointer;
 }

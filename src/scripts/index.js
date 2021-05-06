@@ -7,39 +7,33 @@ import '../styles/header.css';
 import '../styles/main.css';
 import '../styles/footer.css';
 import '../styles/responsive.css';
-// json
-import DATA from '../DATA.json';
-console.log(DATA);
+import '../styles/spinner.css';
+import '../styles/resto-detail.css';
+import '../styles/resto-fav.css';
+// js
+import App from './views/App';
+import swRegister from './utils/sw-register';
+import WebSocketInitiator from './utils/websocket-initiator';
+import CONFIG from './global/config';
+// components
+import './components/navbar';
+import './components/hero';
+import './components/custom-footer';
 
-// toggle nav
-document.querySelector('.menu').addEventListener('click', function () {
-  document.querySelector('.nav-list').classList.toggle('nav-list-block');
+// init App
+const app = new App({
+  button: document.querySelector('.menu'),
+  drawer: document.querySelector('.nav-list'),
+  content: document.querySelector('#main-content'),
 });
 
-function getRestaurants(data) {
-  let restoHTML = '';
+window.addEventListener('hashchange', () => {
+  document.querySelector('.container').scrollIntoView();
+  app.renderPage();
+});
 
-  data.restaurants.forEach((resto, i) => {
-    restoHTML += `
-      <div tabindex="0" class="card">
-        <div class="img-container">
-          <img tabindex="0" class="card-image" alt="${resto.name}" src="${resto.pictureId}"/>
-          <span tabindex="0" class="card-rating">
-            <i title="ratings" class="fa fa-star"></i>
-            <span>${resto.rating}</span>
-          </span>
-        </div>
-
-        <div tabindex="0" class="card-content">
-          <p class="card-content-title">${resto.name} - ${resto.city}</p>
-          <p class="truncate">${resto.description}</p>
-        </div>
-      </div>
-      `;
-  });
-
-  // append to DOM
-  document.getElementById('explore-restaurant').innerHTML = restoHTML;
-}
-
-getRestaurants(DATA);
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+});

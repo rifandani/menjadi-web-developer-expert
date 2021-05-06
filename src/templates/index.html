@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Katalog Restaurant" />
     <meta name="keywords" content="Rifandani Resto" />
-    <link rel="icon" href="./images/favicon.ico" />
+    <meta name="theme-color" content="#ff8303" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/192x192.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
     />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
   </head>
 
   <body>
@@ -24,64 +28,17 @@
 
     <!-- header -->
     <header class="hero">
-      <!-- nav -->
-      <nav>
-        <div class="menu-hp">
-          <div>
-            <a href="/" class="logo-font"> Resto </a>
-          </div>
+      <!-- nav-bar comp -->
+      <nav-bar></nav-bar>
 
-          <div class="menu-container">
-            <button
-              class="menu"
-              aria-label="button menu dropdown on mobile"
-              type="button"
-            >
-              <span class="fa fa-bars"></span>
-            </button>
-          </div>
-        </div>
-
-        <ul class="nav-list">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="#">Favorite</a></li>
-          <li class="nav-item">
-            <a
-              href="https://www.linkedin.com/in/rifandani/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >About</a
-            >
-          </li>
-        </ul>
-      </nav>
-
-      <!-- hero content -->
-      <div tabindex="0" class="hero__text">
-        <h1 class="hero__title">Welcome to Resto</h1>
-
-        <p class="hero__subtitle">
-          Our restaurants offer more than just great food
-        </p>
-
-        <a href="#main-content" class="btn">Read More</a>
-      </div>
+      <!-- hero-content comp -->
+      <hero-content class="hero__text"></hero-content>
     </header>
 
     <!-- main content -->
-    <main>
-      <div id="main-content" class="main-content__container">
-        <h2 tabindex="0" class="main-content__title">Explore Restaurant</h2>
-        <section id="explore-restaurant"></section>
-      </div>
-    </main>
+    <main id="main-content"></main>
 
-    <!-- footer -->
-    <footer tabindex="0">
-      <ul>
-        <li>Copyright © 2021 - Resto</li>
-        <li>Dicoding Submission 1</li>
-      </ul>
-    </footer>
+    <!-- custom-footer comp -->
+    <custom-footer></custom-footer>
   </body>
 </html>

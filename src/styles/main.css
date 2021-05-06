@@ -7,7 +7,7 @@ main {
   margin: 0 auto;
 }
 
-.main-content__container {
+.container {
   margin: 2em 10%;
   padding: 1em;
 }
@@ -36,7 +36,12 @@ main {
 }
 
 .card:hover {
-  box-shadow: 10px 10px 5px 0px var(--secondary-color);
+  box-shadow: 10px 10px 5px 0 var(--secondary-color);
+}
+
+.card-a-tag {
+  text-decoration: none;
+  color: var(--font-color);
 }
 
 .card-rating {
@@ -60,14 +65,14 @@ main {
   width: 100%;
   position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease;
   max-height: 600px;
 }
 
 .card-image {
-  object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-content {
@@ -79,6 +84,7 @@ main {
 .card-content-title {
   font-weight: bold;
   padding-bottom: 0.376em;
+  color: var(--btn);
 }
 
 .truncate {

@@ -6,7 +6,6 @@
   --primary-color: #ffffff;
   --secondary-color: #f0e3ca;
   --font-color: #1b1a17;
-  --navbar-hover: #f0e3ca;
   --btn: #ff8303;
   --btn-hover: #a35709;
 }
@@ -64,6 +63,20 @@ body {
   text-decoration: none;
 }
 
-.btn:hover {
+.submit-btn {
+  padding: 0.5em 1em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--btn);
+  border: 1px solid transparent;
+  font-size: large;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover,
+.submit-btn:hover {
   background-color: var(--btn-hover);
 }
