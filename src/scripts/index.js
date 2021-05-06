@@ -13,7 +13,7 @@ import '../styles/resto-fav.css';
 // js
 import App from './views/App';
 import swRegister from './utils/sw-register';
-import WebSocketInitiator from './utils/websocket-initiator';
+import { WebSocketInitiator } from './utils/websocket-initiator';
 import CONFIG from './global/config';
 // components
 import './components/navbar';

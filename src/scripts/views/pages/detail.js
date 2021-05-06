@@ -5,6 +5,7 @@ import restoDetail from '../templates/resto-detail';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import PostReview from '../../utils/post-review';
 import { initSwalError } from '../../utils/swal-initiator';
+import { sendDataToWebsocket } from '../../utils/websocket-initiator';
 
 const Detail = {
   async render() {
@@ -78,6 +79,12 @@ const Detail = {
 
         // POST review
         await PostReview(url, nameInput.value, reviewInput.value);
+
+        // Send message to websocket server
+        sendDataToWebsocket({
+          name: nameInput.value,
+          review: reviewInput.value,
+        });
 
         // clear form input
         nameInput.value = '';

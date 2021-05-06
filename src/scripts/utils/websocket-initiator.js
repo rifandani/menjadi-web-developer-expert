@@ -1,20 +1,24 @@
 import WebsocketNotif from './websocket-notif';
 
+let socket = null;
+
 const WebSocketInitiator = {
   init(url) {
-    const ws = new WebSocket(url);
-    console.log('ws connected to ', ws.url);
+    socket = new WebSocket(url);
+    console.log('ws connected to => ', socket.url);
 
-    ws.onmessage = this._onMessageHandler;
+    socket.onmessage = this._onMessageHandler;
   },
 
   _onMessageHandler(message) {
-    console.log('websocket onmessage handler => ', message.data);
+    console.log('websocket onmessage handler => ', message);
+
+    const reviewData = JSON.parse(message.data);
 
     WebsocketNotif.sendNotification({
-      title: 'Welcome to Resto',
+      title: reviewData.name,
       options: {
-        body: 'Our restaurants offer more than just great food',
+        body: reviewData.review,
         icon: 'icons/192x192.png',
         image: 'https://i.ibb.co/nBh3jrM/roompy-android-web.png',
         vibrate: [200, 100, 200],
@@ -23,4 +27,10 @@ const WebSocketInitiator = {
   },
 };
 
-export default WebSocketInitiator;
+const sendDataToWebsocket = (reviewData) => {
+  const data = JSON.stringify(reviewData);
+
+  socket.send(data);
+};
+
+export { WebSocketInitiator, sendDataToWebsocket };
