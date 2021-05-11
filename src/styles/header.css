@@ -8,7 +8,8 @@
   min-height: 600px;
   width: 100%;
   text-align: center;
-  background: url('./images/hero.jpg');
+  background-color: var(--primary-color);
+  background: var(--image-color), url('./images/hero.jpg');
   background-position: center;
   object-fit: cover;
   padding: 0 10%;

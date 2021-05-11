@@ -8,6 +8,11 @@
   --font-color: #1b1a17;
   --btn: #ff8303;
   --btn-hover: #a35709;
+  --image-color: linear-gradient(
+    1deg,
+    rgb(255 207 126 / 40%) 3%,
+    rgb(0 0 0 / 40%) 30%
+  );
 }
 
 * {
