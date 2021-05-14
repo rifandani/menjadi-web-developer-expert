@@ -8,7 +8,7 @@ class CustomFooter extends HTMLElement {
       <footer tabindex="0">
         <ul>
           <li>Copyright © 2021 - Resto</li>
-          <li>Dicoding Submission 2</li>
+          <li>Dicoding Submission 3</li>
         </ul>
       </footer>
     `;

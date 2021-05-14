@@ -2,10 +2,11 @@ import UrlParser from '../../routes/url-parser';
 import Spinner from '../templates/spinner';
 import RestaurantSource from '../../data/resto-source';
 import restoDetail from '../templates/resto-detail';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import PostReview from '../../utils/post-review';
 import { initSwalError } from '../../utils/swal-initiator';
 import { sendDataToWebsocket } from '../../utils/websocket-initiator';
+import FavRestoIdb from '../../data/resto-idb';
 
 const Detail = {
   async render() {
@@ -24,12 +25,12 @@ const Detail = {
             <form autocomplete="on">
               <div class="mb-3">
                 <label for="name-input" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name-input" minlength="3" placeholder="Your name..." required>
+                <input type="text" class="form-control" name="name-input" id="name-input" minlength="3" placeholder="Your name..." required>
               </div>
 
               <div class="mb-3">
                 <label for="review-input" class="form-label">Review</label>
-                <input type="text" class="form-control" id="review-input" minlength="3" placeholder="Your review..." required>
+                <input type="text" class="form-control" name="review-input" id="review-input" minlength="3" placeholder="Your review..." required>
               </div>
 
               <button id="submit-review" type="submit" class="submit-btn">Submit Review</button>
@@ -60,9 +61,10 @@ const Detail = {
       detailContainer.innerHTML += restoDetail(data.restaurant);
 
       // init like button
-      LikeButtonInitiator.init({
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      LikeButtonPresenter.init({
         data,
+        favRestoIdb,
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
       });
 
       // change spinner display to main

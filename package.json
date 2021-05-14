@@ -7,7 +7,8 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "lint": "eslint ./src/scripts"
+    "lint": "eslint ./src/scripts",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "Tri Rizeki Rifandani",
@@ -25,6 +26,9 @@
     "eslint-plugin-codeceptjs": "^1.3.0",
     "eslint-plugin-import": "^2.22.1",
     "html-webpack-plugin": "^4.3.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",
     "karma": "^5.1.0",

@@ -5,7 +5,7 @@ import {
 } from '../views/templates/like-button';
 import { initSwalError, initSwalSuccess } from './swal-initiator';
 
-const LikeButtonInitiator = {
+const LikeButtonPresenter = {
   async init({ likeButtonContainer, data }) {
     this._likeButtonContainer = likeButtonContainer;
     this._restaurant = data.restaurant;
@@ -60,4 +60,4 @@ const LikeButtonInitiator = {
   },
 };
 
-export default LikeButtonInitiator;
+export default LikeButtonPresenter;
