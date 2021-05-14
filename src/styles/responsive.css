@@ -52,6 +52,13 @@
   .nav-list-block {
     display: flex;
   }
+
+  .hero {
+    min-height: 500px;
+    background: var(--image-color), url('/images/hero-600.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* Small devices ( >= 600px ) */
@@ -79,6 +86,11 @@
   #fav-resto {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .hero {
+    background: var(--image-color), url('/images/hero-1200.jpg');
+    background-position: center;
   }
 }
 

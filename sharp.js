@@ -11,33 +11,33 @@ if (!fs.existsSync(destination)) {
 }
 
 fs.readdirSync(target).forEach((image) => {
-  // convert image lebar 1800px, dengan suffix -xl.jpg
+  // convert image lebar 1200px
   sharp(`${target}/${image}`)
-    .resize(1800)
+    .resize(1200)
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-xl.jpg`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-1200.jpg`,
       ),
     );
 
-  // convert image lebar 900px, dengan suffix -lg.jpg
+  // convert image lebar 1000px
   sharp(`${target}/${image}`)
-    .resize(900)
+    .resize(1000)
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-lg.jpg`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-1000.jpg`,
       ),
     );
 
-  // convert image lebar 400px, dengan suffix -sm.jpg
+  // convert image lebar 600px
   sharp(`${target}/${image}`)
-    .resize(400)
+    .resize(600)
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-sm.jpg`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-600.jpg`,
       ),
     );
 });

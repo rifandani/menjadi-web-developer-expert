@@ -12,19 +12,29 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="/icons/192x192.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
       crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      crossorigin="anonymous"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://use.fontawesome.com/b070c8f1df.js"
-      crossorigin="anonymous"
-    ></script>
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <noscript>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+        />
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
   </head>
 
   <body>
