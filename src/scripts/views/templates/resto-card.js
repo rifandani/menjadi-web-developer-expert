@@ -5,9 +5,9 @@ const restoCard = (resto) => `
     <div tabindex="0" class="card">
       <a href="#/resto/${resto.id}" class="card-a-tag">
         <div class="img-container">
-          <img tabindex="0" class="card-image" crossorigin="anonymous" alt="${
+          <img tabindex="0" class="card-image lazyload" crossorigin="anonymous" alt="${
             resto.name
-          }" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
+          }" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" />
           <span tabindex="0" class="card-rating">
             <i title="ratings" class="fa fa-star"></i>
             <span>${resto.rating}</span>

@@ -1,11 +1,12 @@
 {
   "name": "restaurant-apps",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Dicoding front end path submission kelas menjadi web developer expert",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && node sharp.js",
+    "build-image": "node sharp.js",
     "test": "karma start",
     "lint": "eslint ./src/scripts",
     "e2e": "codeceptjs run --steps"
@@ -38,8 +39,10 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
     "playwright": "^1.11.0",
+    "sharp": "^0.28.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^4.4.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9",
@@ -48,6 +51,7 @@
   },
   "dependencies": {
     "idb": "^6.0.0",
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.5",
     "sweetalert2": "^10.16.7",
     "workbox-core": "^6.1.5",
