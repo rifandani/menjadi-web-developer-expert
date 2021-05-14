@@ -5,7 +5,7 @@ const restoDetail = (resto) => `
   <div class="detail">
     <div class="img-container">
         <img class="detail-img" alt="${resto.name}" src="${
-  CONFIG.BASE_IMAGE_URL + resto.pictureId
+  CONFIG.BASE_IMAGE_URL_SM + resto.pictureId
 }"/>
     </div>
 
