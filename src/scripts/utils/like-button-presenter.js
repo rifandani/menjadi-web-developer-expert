@@ -1,4 +1,3 @@
-import FavRestoIdb from '../data/resto-idb';
 import {
   createLikeButtonTemplate,
   createLikedButtonTemplate,
@@ -6,9 +5,10 @@ import {
 import { initSwalError, initSwalSuccess } from './swal-initiator';
 
 const LikeButtonPresenter = {
-  async init({ likeButtonContainer, data }) {
+  async init({ likeButtonContainer, data, favRestoIdb }) {
     this._likeButtonContainer = likeButtonContainer;
     this._restaurant = data.restaurant;
+    this._favRestoIdb = favRestoIdb;
 
     await this._renderButton();
   },
@@ -18,7 +18,7 @@ const LikeButtonPresenter = {
       const { id } = this._restaurant;
 
       // get resto in indexed db
-      const restaurant = await FavRestoIdb.getResto(id);
+      const restaurant = await this._favRestoIdb.getResto(id);
 
       if (restaurant) {
         this._renderLikedButtonTemplate();
@@ -40,7 +40,7 @@ const LikeButtonPresenter = {
 
     likeButton.addEventListener('click', async () => {
       // onClick fav the selected resto
-      await FavRestoIdb.putResto(this._restaurant);
+      await this._favRestoIdb.putResto(this._restaurant);
       initSwalSuccess('Resto favorited!');
       this._renderButton();
     });
@@ -53,7 +53,7 @@ const LikeButtonPresenter = {
 
     likeButton.addEventListener('click', async () => {
       // onClick unfav the selected resto
-      await FavRestoIdb.deleteResto(this._restaurant.id);
+      await this._favRestoIdb.deleteResto(this._restaurant.id);
       initSwalSuccess('Resto unfavorited!');
       this._renderButton();
     });

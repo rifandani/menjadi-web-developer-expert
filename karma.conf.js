@@ -10,7 +10,7 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
-    files: ['specs/**/*Spec.js'],
+    files: ['specs/**/*.spec.js'],
 
     // list of files / patterns to exclude
     exclude: [],

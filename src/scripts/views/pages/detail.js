@@ -6,7 +6,7 @@ import LikeButtonPresenter from '../../utils/like-button-presenter';
 import PostReview from '../../utils/post-review';
 import { initSwalError } from '../../utils/swal-initiator';
 import { sendDataToWebsocket } from '../../utils/websocket-initiator';
-import FavRestoIdb from '../../data/resto-idb';
+import favRestoIdb from '../../data/resto-idb';
 
 const Detail = {
   async render() {

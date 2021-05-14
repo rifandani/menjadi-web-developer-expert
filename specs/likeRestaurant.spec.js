@@ -31,9 +31,9 @@ describe('Liking Resto', () => {
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
     const resto = await FavRestoIdb.getResto(1);
-
     expect(resto).toEqual({ id: 1 });
-    FavRestoIdb.deleteResto(1);
+
+    await FavRestoIdb.deleteResto(1);
   });
 
   it('should not add a resto again when its already liked', async () => {
@@ -41,9 +41,10 @@ describe('Liking Resto', () => {
 
     await FavRestoIdb.putResto({ id: 1 });
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-    expect(await FavRestoIdb.getAllResto()).toEqual([{ id: 1 }]);
+    const allResto = await FavRestoIdb.getAllResto();
+    expect(allResto).toEqual([{ id: 1 }]);
 
-    FavRestoIdb.deleteResto(1);
+    await FavRestoIdb.deleteResto(1);
   });
 
   // menggunakan metode xit, bukan it
@@ -51,7 +52,7 @@ describe('Liking Resto', () => {
     await TestFactories.createLikeButtonPresenterWithResto({});
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-
-    expect(await FavRestoIdb.getAllResto()).toEqual([]);
+    const allResto = await FavRestoIdb.getAllResto();
+    expect(allResto).toEqual([]);
   });
 });
