@@ -5,6 +5,7 @@
 footer {
   padding: 2em;
   width: 100%;
+  height: 100%;
   text-align: center;
   border-top: 3px groove var(--font-color);
   background-color: var(--secondary-color);

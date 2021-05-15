@@ -55,7 +55,7 @@
 
   .hero {
     min-height: 500px;
-    background: var(--image-color), url('/images/hero-600.jpg');
+    background: var(--image-color), url('./images/hero-600.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -89,7 +89,7 @@
   }
 
   .hero {
-    background: var(--image-color), url('/images/hero-1200.jpg');
+    background: var(--image-color), url('./images/hero-1200.jpg');
     background-position: center;
   }
 }
