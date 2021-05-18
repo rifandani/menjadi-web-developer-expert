@@ -56,7 +56,7 @@ body {
 
 .btn {
   margin: 2em;
-  padding: 0.5em 1em;
+  padding: 0.75em 1em;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -69,7 +69,7 @@ body {
 }
 
 .submit-btn {
-  padding: 0.5em 1em;
+  padding: 0.75em 1em;
   font-weight: 700;
   color: white;
   text-align: center;
