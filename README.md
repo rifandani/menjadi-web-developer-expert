@@ -30,7 +30,7 @@ Anda dapat melihat dan mendownload source code dari submission 2 di [link ini](h
 
 ## Submission 3️⃣: Katalog Restoran + PWA + Testing and Performance Optimized
 
-Anda dapat melihat dan mendownload source code dari submission 3 di [link ini]()
+Anda dapat melihat dan mendownload source code dari submission 3 di [link ini](https://github.com/rifandani/menjadi-web-developer-expert/archive/refs/tags/v0.3.0.zip)
 
 ---
 
